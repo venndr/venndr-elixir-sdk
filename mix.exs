@@ -23,11 +23,11 @@ defmodule VenndrSDK.MixProject do
   defp deps() do
     [
       {:plug, "~> 1.16"},
-      {:redix, "~> 1.1"},
+      {:redix, "~> 1.5"},
       {:ex_crypto, "~> 0.10", hex: :ex_crypto_copy},
-      {:httpoison, "~> 1.8"},
+      {:httpoison, "~> 2.2"},
       {:mimic, "~> 1.7", only: :test},
-      {:ex_doc, "~> 0.14", only: :dev, runtime: false}
+      {:ex_doc, "~> 0.34", only: :dev, runtime: false}
     ]
   end
 
