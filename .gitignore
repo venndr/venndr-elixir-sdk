@@ -1,0 +1,18 @@
+# The directory Mix will write compiled artifacts to.
+/_build/
+
+# The directory Mix downloads your dependencies sources to.
+/deps/
+
+# If the VM crashes, it generates a dump, let's ignore it too.
+erl_crash.dump
+
+# Also ignore archive artifacts (built via "mix archive.build").
+*.ez
+
+# Ignore package tarball (built via "mix hex.build").
+venndr_sdk-*.tar
+
+.elixir_ls
+priv/plts/dialyzer.plt
+priv/plts/dialyzer.plt.hash
