@@ -24,9 +24,10 @@ defmodule VenndrSDK.MixProject do
     [
       {:plug, "~> 1.16"},
       {:redix, "~> 1.1"},
-      {:awesome_ex_crypto, git: "https://github.com/awesome-elixir/awesome_ex_crypto"},
+      {:ex_crypto, "~> 0.10", hex: :ex_crypto_copy},
       {:httpoison, "~> 1.8"},
-      {:mimic, "~> 1.7", only: :test}
+      {:mimic, "~> 1.7", only: :test},
+      {:ex_doc, "~> 0.14", only: :dev, runtime: false}
     ]
   end
 
