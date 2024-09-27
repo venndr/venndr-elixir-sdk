@@ -1,4 +1,3 @@
-# credo:disable-for-this-file ChartReporting.Checks.PublicFunctionsDoc
 defmodule VenndrSDK.Plug.WebhookVerifier do
   @moduledoc """
   Verifies incoming webhooks using public key/private key RSA.
@@ -42,7 +41,7 @@ defmodule VenndrSDK.Plug.WebhookVerifier do
 
   @impl true
   def call(conn, _opts) do
-    skip = is_nil(Application.get_env(:chart_reporting, :unsafe_skip_webhook_verify))
+    skip = is_nil(Application.get_env(:venndr_sdk, :unsafe_skip_webhook_verify))
     verify(conn, skip)
   end
 

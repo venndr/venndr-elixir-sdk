@@ -29,8 +29,8 @@ defmodule VenndrSDK.Keys do
       end)
 
   defp fetch_key(version) do
-    hackney_options = Application.get_env(:chart_reporting, :hackney_options, [])
-    base_url = Application.get_env(:chart_reporting, :venndr_keys_base_url)
+    hackney_options = Application.get_env(:venndr_sdk, :hackney_options, [])
+    base_url = Application.get_env(:venndr_sdk, :venndr_keys_base_url)
 
     case HTTPoison.get("#{base_url}/#{version}", [], hackney: hackney_options) do
       {:ok, %{body: body, status_code: 200}} ->
