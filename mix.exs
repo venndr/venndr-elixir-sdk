@@ -37,7 +37,7 @@ defmodule VenndrSDK.MixProject do
 
   defp package() do
     [
-      licenses: ["Apache-2.0"],
+      licenses: ["ISC"],
       links: %{"GitHub" => "https://github.com/venndr/venndr-elixir-sdk"}
     ]
   end
