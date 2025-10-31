@@ -12,6 +12,7 @@ defmodule VenndrSDK.MixProject do
       package: package(),
       deps: deps(),
       name: "Venndr SDK",
+      homepage_url: "https://github.com/venndr/venndr-elixir-sdk",
       source_url: "https://github.com/venndr/venndr-elixir-sdk"
     ]
   end
