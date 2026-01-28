@@ -1,0 +1,16 @@
+name: Lint commit subjects
+
+on:
+  pull_request:
+
+jobs:
+  commits_check_job:
+    runs-on: ubuntu-latest
+    name: Commits Check
+    steps:
+      - name: Lint commit subjects
+        id: "validate-pr-commits"
+        uses: musicglue/validate-pr-commits@main
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
