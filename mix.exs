@@ -13,7 +13,9 @@ defmodule VenndrSDK.MixProject do
       deps: deps(),
       name: "Venndr SDK",
       homepage_url: "https://github.com/venndr/venndr-elixir-sdk",
-      source_url: "https://github.com/venndr/venndr-elixir-sdk"
+      source_url: "https://github.com/venndr/venndr-elixir-sdk",
+      cli: cli(),
+      aliases: aliases()
     ]
   end
 
@@ -41,5 +43,15 @@ defmodule VenndrSDK.MixProject do
       licenses: ["ISC"],
       links: %{"GitHub" => "https://github.com/venndr/venndr-elixir-sdk"}
     ]
+  end
+
+  defp aliases do
+    [
+      "test.ci": ["test --color"]
+    ]
+  end
+
+  def cli do
+    [preferred_envs: ["test.ci": :test]]
   end
 end
