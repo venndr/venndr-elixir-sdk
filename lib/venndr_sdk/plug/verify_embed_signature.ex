@@ -74,7 +74,7 @@ defmodule VenndrSDK.Plug.VerifyEmbedSignature do
   defp get_sigt(conn),
     do:
       conn.query_params
-      |> Map.get("sigt", "0")
+      |> Map.get("sigt", "")
       |> Integer.parse()
       |> (case do
             {sigt, _} -> sigt
