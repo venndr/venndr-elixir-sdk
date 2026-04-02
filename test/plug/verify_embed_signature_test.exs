@@ -55,8 +55,8 @@ defmodule VenndrSDK.Plug.VerifyEmbedSignatureTest do
     {:ok,
      %{
        default_opts: default_opts,
-       invalid_paths: [doctored_path, missing_sigv, missing_sig, partial_sig],
-       expired_signatures: [missing_sigt, expired_signature],
+       invalid_paths: [doctored_path, missing_sigv, missing_sigt, missing_sig, partial_sig],
+       expired_signatures: [expired_signature],
        valid_path: valid_path
      }}
   end
